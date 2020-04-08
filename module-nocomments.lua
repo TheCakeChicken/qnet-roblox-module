@@ -30,7 +30,7 @@
 local ACCOUNT_KEY = ""  
 local banMessage = "\n\n[QNET]\nYou are banned from QNET powered games.\n\nReason:\n"
 local HttpService = game:GetService("HttpService")
-game.Players.PlayerAdded:Connect(function(plr)
+game:GetService("Players").PlayerAdded:Connect(function(plr)
 	local function getBan() 
 		local response = HttpService:GetAsync("https://qnet.quantos.xyz/api/robloxBanned?key=" .. ACCOUNT_KEY .. "&id=" .. plr.UserId)
 		local data = HttpService:JSONDecode(response)
