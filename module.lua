@@ -42,8 +42,8 @@ local banMessage = "\n\n[QNET]\nYou are banned from QNET powered games.\n\nReaso
 --Calling out the HttpService
 local HttpService = game:GetService("HttpService")
 
---On Payer Join event
-game.Players.PlayerAdded:Connect(function(plr)
+--On Player Join event
+game:GetService("Players").PlayerAdded:Connect(function(plr)
 	--Initating a function
 	local function getBan() 
 		--Sending a GET request to the API
